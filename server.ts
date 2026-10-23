@@ -207,7 +207,12 @@ await execFileAsync(gsExecutable, gsArgs);
     gsArgs.push(`-sOutputFile=${outputPath}`, inputPath);
 
     try {
-      await execFileAsync('gs', gsArgs);
+     const gsExecutable =
+  process.platform === 'win32'
+    ? 'C:\\Program Files\\gs\\gs10.08.0\\bin\\gswin64c.exe'
+    : 'gs';
+
+await execFileAsync(gsExecutable, gsArgs);
       if (fs.existsSync(outputPath)) {
         const stat = fs.statSync(outputPath);
         if (stat.size > 0) {
