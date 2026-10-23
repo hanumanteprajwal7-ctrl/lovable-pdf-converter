@@ -1,20 +1,32 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Lovable PDF Converter
 
-# Run and deploy your AI Studio app
+A modern, easy-to-use PDF toolkit for managing and converting documents.
 
-This contains everything you need to run your app locally.
+### Features
 
-View your app in AI Studio: https://ai.studio/apps/ea70b48e-685d-4a4e-a1be-a158a2d54c6f
+* Protect PDF with a password
+* Unlock password-protected PDFs when authorized
+* PDF compression
+* Document conversion tools
+* Simple, user-friendly interface
 
-## Run Locally
+### Built With
 
-**Prerequisites:**  Node.js
+* React
+* TypeScript
+* Vite
+* Node.js and Express
+* Ghostscript
 
+### Run Locally
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000` in your browser.
+
+---
+
+Developed as a PDF utility project.
