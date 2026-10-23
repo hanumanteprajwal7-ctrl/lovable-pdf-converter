@@ -1,0 +1,6 @@
+{
+  "name": "Lovable PDF Converter",
+  "description": "Your Documents, Simplified. Convert, compress, merge, split, OCR, and manage your PDFs with fast, secure browser-based tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
