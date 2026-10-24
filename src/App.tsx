@@ -15,41 +15,80 @@ import { ToolDef } from './types';
 
 export default function App() {
   const [startupDone, setStartupDone] = useState(false);
-  const [currentPath, setCurrentPath] = useState<string>('/');
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [activeTool, setActiveTool] = useState<ToolDef | null>(null);
+  const [currentPath, setCurrentPath] = useState<string>(
+  window.location.pathname || '/'
+);
+const [searchOpen, setSearchOpen] = useState(false);
+
+const [activeTool, setActiveTool] = useState<ToolDef | null>(() => {
+  const pathname = window.location.pathname;
+  if (!pathname.startsWith('/tool/')) return null;
+
+  const toolId = pathname.slice('/tool/'.length);
+  return TOOLS.find((tool) => tool.id === toolId) ?? null;
+});
   const [pendingFiles, setPendingFiles] = useState<File[]>([]);
   const [homeQuickCategory, setHomeQuickCategory] = useState<string>('all');
 
   // Sync navigation
-  const navigate = (path: string, files?: File[]) => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setCurrentPath(path);
+  // Sync navigation
+const navigate = (path: string, files?: File[]) => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    if (files && files.length > 0) {
-      setPendingFiles(files);
-    } else {
-      setPendingFiles([]);
-    }
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
 
-    if (path.startsWith('/tool/')) {
-      const toolId = path.replace('/tool/', '');
-      const found = TOOLS.find((t) => t.id === toolId);
-      if (found) setActiveTool(found);
-    } else if (path.startsWith('/category/')) {
-      const catId = path.replace('/category/', '');
-      setHomeQuickCategory(catId);
-    }
-  };
+  if (window.location.pathname !== normalizedPath) {
+    window.history.pushState({}, '', normalizedPath);
+  }
+
+  setCurrentPath(normalizedPath);
+
+  if (files && files.length > 0) {
+    setPendingFiles(files);
+  } else {
+    setPendingFiles([]);
+  }
+
+  if (normalizedPath.startsWith('/tool/')) {
+    const toolId = normalizedPath.slice('/tool/'.length);
+    const found = TOOLS.find((tool) => tool.id === toolId);
+    setActiveTool(found ?? null);
+  } else if (normalizedPath.startsWith('/category/')) {
+    const catId = normalizedPath.slice('/category/'.length);
+    setHomeQuickCategory(catId);
+    setActiveTool(null);
+  } else {
+    setActiveTool(null);
+  }
+};
 
   // Listen to browser popstate if user navigates back
   useEffect(() => {
-    const handlePopState = () => {
-      // In hash or path
-    };
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
+  const handlePopState = () => {
+    const path = window.location.pathname || '/';
+
+    setCurrentPath(path);
+    setPendingFiles([]);
+
+    if (path.startsWith('/tool/')) {
+      const toolId = path.slice('/tool/'.length);
+      const found = TOOLS.find((tool) => tool.id === toolId);
+      setActiveTool(found ?? null);
+    } else {
+      setActiveTool(null);
+
+      if (path.startsWith('/category/')) {
+        setHomeQuickCategory(path.slice('/category/'.length));
+      }
+    }
+  };
+
+  window.addEventListener('popstate', handlePopState);
+
+  return () => {
+    window.removeEventListener('popstate', handlePopState);
+  };
+}, []);
 
   // Global hotkey for quick search (Ctrl+K, Cmd+K, or '/')
   useEffect(() => {
