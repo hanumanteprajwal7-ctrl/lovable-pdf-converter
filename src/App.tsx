@@ -13,6 +13,65 @@ import { SettingsPage } from './pages/SettingsPage';
 import { TOOLS } from './config/tools';
 import { ToolDef } from './types';
 
+const SITE_NAME = 'Lovable PDF Converter';
+const SITE_URL = 'https://lovable-pdf-converter.onrender.com';
+
+const updatePageSEO = (path: string, tool: ToolDef | null) => {
+  let title = 'Free Online PDF Tools | Compress, Merge & Split PDFs';
+  let description =
+    'Use free online PDF tools to compress, merge, split, convert, edit, and organize PDF files.';
+
+  if (tool) {
+    title = `${tool.name} Online Free | ${SITE_NAME}`;
+    description = `${tool.description} ${tool.tagline}`;
+  } else if (path === '/all-tools') {
+    title = `All PDF Tools Online Free | ${SITE_NAME}`;
+    description =
+      'Explore free online PDF tools to convert, compress, merge, split, edit, and organize documents.';
+  } else if (path.startsWith('/category/')) {
+    const category = path.slice('/category/'.length).replace(/-/g, ' ');
+    title = `${category.replace(/\b\w/g, (char) => char.toUpperCase())} PDF Tools | ${SITE_NAME}`;
+    description = `Explore online PDF tools for ${category}. Convert, organize, and manage your documents.`;
+  }
+
+  document.title = title;
+
+  const setMeta = (selector: string, attribute: string, value: string) => {
+    let element = document.head.querySelector<HTMLMetaElement>(selector);
+
+    if (!element) {
+      element = document.createElement('meta');
+      if (selector.includes('name=')) {
+        element.name = selector.match(/name="([^"]+)"/)?.[1] ?? '';
+      } else if (selector.includes('property=')) {
+        element.setAttribute(
+          'property',
+          selector.match(/property="([^"]+)"/)?.[1] ?? ''
+        );
+      }
+      document.head.appendChild(element);
+    }
+
+    element.setAttribute(attribute, value);
+  };
+
+  setMeta('meta[name="description"]', 'content', description);
+  setMeta('meta[property="og:title"]', 'content', title);
+  setMeta('meta[property="og:description"]', 'content', description);
+
+  let canonical = document.head.querySelector<HTMLLinkElement>(
+    'link[rel="canonical"]'
+  );
+
+  if (!canonical) {
+    canonical = document.createElement('link');
+    canonical.rel = 'canonical';
+    document.head.appendChild(canonical);
+  }
+
+  canonical.href = `${SITE_URL}${path}`;
+};
+
 export default function App() {
   const [startupDone, setStartupDone] = useState(false);
   const [currentPath, setCurrentPath] = useState<string>(
@@ -29,6 +88,9 @@ const [activeTool, setActiveTool] = useState<ToolDef | null>(() => {
 });
   const [pendingFiles, setPendingFiles] = useState<File[]>([]);
   const [homeQuickCategory, setHomeQuickCategory] = useState<string>('all');
+  useEffect(() => {
+  updatePageSEO(currentPath, activeTool);
+}, [currentPath, activeTool]);
 
   // Sync navigation
   // Sync navigation
