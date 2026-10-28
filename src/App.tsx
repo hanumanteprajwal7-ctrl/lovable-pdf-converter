@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import React, { useState, useEffect } from 'react';
 import { SettingsProvider } from './context/SettingsContext';
 import { BatchQueueProvider } from './context/BatchQueueContext';
@@ -171,7 +172,9 @@ export default function App() {
 
           {/* Batch Queue Drawer */}
           <BatchQueueDrawer />
+
         </div>
+        <Analytics />
       </BatchQueueProvider>
     </SettingsProvider>
   );
