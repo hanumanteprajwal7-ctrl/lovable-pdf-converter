@@ -1,0 +1,694 @@
+# PROJECT: LOVABLE PDF CONVERTER — COMPLETE REPAIR, IMPROVEMENT AND PRODUCTION-READINESS
+
+Act as a senior full-stack engineer, PDF processing specialist, UI/UX designer, application security engineer, and deployment architect.
+
+I have an existing project called **Lovable PDF Converter**, inspired by iLovePDF. It is a personal project that I want to turn into a reliable, professional, production-ready PDF utility website and eventually an Android application.
+
+I am providing the existing project's ZIP folder. This is the current Google AI Studio copy of my project. It contains an existing React frontend, TypeScript code, PDF processing services, an Express server, multiple PDF tools, settings, and UI components.
+
+Your task is to thoroughly inspect, repair, improve, and complete the existing project.
+
+**Do not create a new project from scratch. Do not replace the existing application with a simplified demo. Do not remove working features to make the code easier.**
+
+Make changes directly to the existing files.
+
+The existing project includes components and services such as:
+
+* `src/App.tsx`
+* `src/config/tools.ts`
+* `src/context/SettingsContext.tsx`
+* `src/context/BatchQueueContext.tsx`
+* `src/components/Header.tsx`
+* `src/components/Dropzone.tsx`
+* `src/components/BatchQueueDrawer.tsx`
+* `src/pages/HomePage.tsx`
+* `src/pages/AllToolsPage.tsx`
+* `src/pages/ToolStudioPage.tsx`
+* `src/pages/SettingsPage.tsx`
+* `src/services/pdfService.ts`
+* `src/services/ocrService.ts`
+* `src/utils/download.ts`
+* `src/types/index.ts`
+* `src/index.css`
+* `server.ts`
+* `package.json`
+* `vite.config.ts`
+
+These are starting points, not an exhaustive list. Inspect the entire repository, including other components, routes, dependencies, and server endpoints.
+
+## 1. FIRST: AUDIT THE ENTIRE PROJECT
+
+Before modifying anything:
+
+1. Examine the project structure and identify all available tools.
+2. Inspect the existing implementations of every tool marked as ready.
+3. Identify buttons that do nothing, incorrect event handlers, missing processing logic, incomplete endpoints, incorrect file handling, and broken downloads.
+4. Trace each tool's complete workflow:
+
+   * File selection.
+   * File validation.
+   * File preview.
+   * User configuration.
+   * PDF processing.
+   * Result validation.
+   * Download.
+   * Error handling.
+5. Check whether the frontend calls the correct processing function or backend endpoint.
+6. Identify missing dependencies and incorrect dependency versions.
+7. Check for duplicated implementations, dead code, broken imports, TypeScript errors, and runtime errors.
+8. Inspect the current theme system, page navigation, settings persistence, batch processing, and PDF preview implementation.
+9. Determine which features genuinely work in a browser and which require a backend.
+10. Identify features that will fail after deployment to Vercel because they depend on local executables, local filesystem paths, persistent server storage, or unsupported server configuration.
+
+Create an internal implementation plan and then execute it.
+
+Do not stop after producing an audit report.
+
+## 2. FIX LIGHT MODE AND DARK MODE
+
+The project already contains a theme setting in `SettingsContext.tsx`, including a theme value and logic for adding or removing the `dark` class on the document element.
+
+However, the light/dark mode option is not working correctly.
+
+Repair the existing implementation.
+
+Requirements:
+
+* Provide a clearly visible light/dark mode toggle in the header or another intuitive location.
+* Make the toggle functional throughout the application.
+* Update all relevant surfaces, including:
+
+  * Header and navigation.
+  * Homepage.
+  * Tool cards.
+  * Tool Studio.
+  * Upload zones.
+  * PDF previews.
+  * Settings.
+  * Batch queue.
+  * Dialogs and modals.
+  * Dropdowns.
+  * File lists.
+  * Processing indicators.
+  * Success and error panels.
+  * Footer.
+* Eliminate unreadable text, inconsistent backgrounds, and hard-coded colors that break dark mode.
+* Preserve the user's theme preference across refreshes using local storage.
+* Apply the saved theme before displaying the main interface to prevent a distracting flash of the wrong theme.
+* Respect the operating system's preferred theme when the user has not explicitly chosen one, if this can be implemented cleanly.
+* Provide accessible toggle labels and keyboard interaction.
+* Make the settings page and header toggle use the same shared theme state.
+
+Do not merely change the icon. The entire application must genuinely switch between attractive, readable light and dark themes.
+
+## 3. FIX REORDER PDF PAGES COMPLETELY
+
+The existing Reorder PDF Pages feature is not working correctly.
+
+Repair the entire workflow.
+
+Expected functionality:
+
+1. Upload a PDF.
+2. Validate the PDF and load its actual pages.
+3. Display page thumbnails with page numbers.
+4. Let the user change the order of pages.
+5. Support drag-and-drop reordering.
+6. Provide accessible Move Up and Move Down controls as an alternative to dragging.
+7. Update the displayed order immediately when a page moves.
+8. Keep the visual order and internal page order synchronized.
+9. Allow the user to reset the order.
+10. Generate a new PDF containing the pages in exactly the displayed order.
+11. Validate the generated PDF.
+12. Download the reordered file with a sensible filename.
+
+Important technical requirements:
+
+* Use the existing PDF processing architecture where appropriate.
+* Use `pdf-lib` page copying or another suitable existing implementation to produce the final PDF.
+* Do not accidentally modify the original uploaded file.
+* Handle large PDFs without freezing the interface unnecessarily.
+* Show processing progress where feasible.
+* Handle invalid files, empty PDFs, rendering failures, and download errors.
+* Prevent the download button from appearing successful before the output has actually been generated.
+* Ensure that the final PDF's physical page sequence matches the thumbnails shown to the user.
+
+Test this feature with PDFs containing several pages, including a deliberately shuffled order.
+
+Do not mark the feature as complete merely because the thumbnails can move.
+
+## 4. MAKE THE BROWSER-BASED PDF PROCESSING RELIABLE
+
+The primary goal is to provide dependable PDF utilities that work directly in the browser whenever technically possible.
+
+The existing project already uses libraries such as `pdf-lib` and `pdfjs-dist`. Reuse and improve the existing services instead of unnecessarily duplicating them.
+
+Prioritize browser-based processing for suitable operations, including:
+
+* Merge PDF.
+* Split PDF.
+* Extract PDF pages.
+* Remove PDF pages.
+* Reorder PDF pages.
+* Rotate PDF pages.
+* JPG to PDF.
+* PNG to PDF.
+* Multiple Images to PDF.
+* Add page numbers.
+* Add text watermarks.
+* Extract text from PDFs where supported.
+* Other operations already supported by the current client-side architecture.
+
+For each operation:
+
+* Use the correct PDF manipulation API.
+* Preserve page order, dimensions, rotation, and page content wherever supported.
+* Avoid corrupting the document.
+* Avoid silently returning the original PDF when the requested transformation failed.
+* Release temporary object URLs and resources when no longer needed.
+* Display accurate errors and meaningful processing states.
+* Validate output before offering a download.
+
+For scanned PDFs, distinguish between extracting embedded text and performing OCR.
+
+For OCR, reuse the existing OCR service and ensure that unsupported languages or processing failures are reported clearly.
+
+Do not send user documents to Gemini or another external AI service merely to perform a conventional PDF operation.
+
+Do not introduce unnecessary AI API calls, paid services, or API keys for tasks that can be performed locally.
+
+### PDF preview and upload experience
+
+Fix the upload interface so that users can clearly see:
+
+* The uploaded filename.
+* File size.
+* Page count when applicable.
+* A PDF preview or page thumbnails where appropriate.
+* The currently selected files.
+* The ability to remove or replace a file.
+* The selected options before processing.
+* The processing state and actual result.
+
+Never make the user guess whether a file has been uploaded successfully.
+
+## 5. FIX PDF COMPRESSION AND TARGET-SIZE COMPRESSION
+
+The existing compression implementation does not always achieve a meaningful reduction in file size.
+
+Sometimes the output barely changes. In other cases, the output is much larger or the requested target is not achieved.
+
+Review the existing compression service and repair it.
+
+The application must clearly distinguish between:
+
+1. Standard compression.
+2. Stronger compression.
+3. Image-oriented or rasterizing compression.
+4. Target-size compression.
+
+Where supported, allow the user to specify a desired output size in KB or MB.
+
+For example, a user might request that a 2 MB PDF be reduced to approximately 250 KB.
+
+Implement a sensible iterative compression strategy where technically possible.
+
+Requirements:
+
+* Determine whether the PDF contains primarily images, vector content, or text.
+* Preserve searchable text and vector content whenever possible.
+* Prefer lossless or minimally destructive optimizations when suitable.
+* Use image downsampling and quality adjustments only when appropriate.
+* Allow users to choose a quality-versus-size trade-off.
+* Avoid rasterizing every page by default.
+* Do not claim to achieve an impossible target.
+* Stop retrying when further compression is unlikely to help.
+* Display the actual original and output sizes.
+* Display the real percentage reduction.
+* If the target is not achievable, clearly explain this and provide the best valid result when appropriate.
+* Never claim that a target size was achieved when it was not.
+* Ensure the generated file remains a valid PDF.
+
+If a browser-only approach cannot reliably perform a particular compression operation, identify the limitation instead of pretending the operation is equivalent to professional native compression tools.
+
+Use native tools only if the deployment architecture can support them reliably.
+
+## 6. AUDIT EVERY TOOL AND ITS STATUS
+
+Inspect `src/config/tools.ts` and every corresponding processing implementation.
+
+Do not assume that a tool works simply because its status is `ready`.
+
+Create a complete mapping of:
+
+* Tool ID.
+* Tool name.
+* Current status.
+* Frontend component or workflow.
+* Processing function or backend endpoint.
+* Actual implementation status.
+* Required repairs.
+
+Inspect all existing tools, not only the ones explicitly mentioned in this prompt.
+
+Pay special attention to:
+
+### PDF operations
+
+* Merge PDF.
+* Split PDF.
+* Compress PDF.
+* Target-size compression.
+* Rotate PDF.
+* Reorder PDF pages.
+* Remove PDF pages.
+* Extract PDF pages.
+* Organize PDF.
+* Protect PDF.
+* Unlock PDF.
+* Add page numbers.
+* Add watermark.
+* OCR PDF.
+* Extract text from PDF.
+
+### File conversions
+
+* JPG to PDF.
+* PNG to PDF.
+* Multiple Images to PDF.
+* Word to PDF.
+* Excel to PDF.
+* PowerPoint to PDF.
+* PDF to Word/DOCX.
+* PDF to HTML.
+* PDF to images.
+* Text to PDF.
+* Any other conversion already listed in the application.
+
+This list is illustrative. Check every actual entry in the project.
+
+For every tool:
+
+1. Confirm that its UI exists.
+2. Confirm that its file input accepts the correct formats.
+3. Confirm that its processing function exists.
+4. Confirm that its processing function actually performs the requested transformation.
+5. Confirm that the output is valid and downloadable.
+6. Confirm that errors are handled.
+7. Confirm that its status is truthful.
+
+If a feature is incomplete, implement it if feasible.
+
+If it cannot be implemented reliably with the available architecture, do not label it as fully functional.
+
+Never use a fake success message, placeholder download, unchanged input file, or simulated processing result.
+
+## 7. IMPORTANT: CONVERSION FEATURES MUST BE GENUINE
+
+Review all Office-to-PDF and PDF-to-Office conversions.
+
+For Word, Excel, and PowerPoint files, do not simply rename a file extension or return the original file.
+
+Likewise, do not claim to convert a PDF to DOCX when the output is only a text file with a `.docx` extension.
+
+Use a suitable conversion engine or a legitimate implementation.
+
+Consider browser-compatible libraries or an appropriately designed external conversion service where necessary.
+
+However:
+
+* Do not introduce an unconfigured external API.
+* Do not require an API key without explaining the requirement.
+* Do not send documents to third parties without making that behavior clear.
+* Do not invent a working backend.
+* Do not use local executable paths that only work on my personal Windows computer.
+* Preserve formatting as far as the chosen conversion engine allows.
+* Explain limitations honestly.
+
+If a feature cannot be completed within the existing architecture, keep it visibly marked as requiring additional implementation rather than falsely advertising it as ready.
+
+## 8. REPAIR PROTECT PDF AND UNLOCK PDF
+
+The project previously included work on password protection and unlocking using QPDF.
+
+The local development environment had QPDF installed at a Windows-specific path. This is a potential deployment problem.
+
+Inspect the current `server.ts` implementation and any related frontend functions.
+
+Requirements for Protect PDF:
+
+* Accept a valid PDF.
+* Accept a password securely.
+* Validate password requirements.
+* Apply actual PDF encryption.
+* Return the generated protected PDF.
+* Handle processing errors.
+* Avoid logging passwords.
+* Clean up temporary files.
+* Never claim protection succeeded if encryption failed.
+
+Requirements for Unlock PDF:
+
+* Accept an encrypted PDF and the required password.
+* Validate the password.
+* Decrypt only when the user is authorized and supplies the appropriate credentials.
+* Handle incorrect passwords clearly.
+* Generate a valid output PDF.
+* Never pretend that an unsupported PDF was successfully unlocked.
+
+Use QPDF or another appropriate PDF security engine where suitable.
+
+However, design the backend so that the executable path is configurable through environment variables.
+
+Do not depend on `C:\Program Files\...` or another machine-specific Windows path in production.
+
+If QPDF is unavailable in the deployment environment, return a clear, actionable error instead of crashing.
+
+Do not claim that these operations are deployment-ready until the chosen hosting architecture can actually execute them.
+
+## 9. FIX THE BATCH QUEUE
+
+Inspect `BatchQueueContext.tsx` and `BatchQueueDrawer.tsx`.
+
+The batch queue should work consistently with the supported tools.
+
+Implement or repair:
+
+* Adding files.
+* Removing files.
+* Clearing the queue.
+* Displaying filenames and sizes.
+* Showing each file's processing status.
+* Showing errors for individual files.
+* Downloading generated files.
+* Handling multiple files without mixing their results.
+* Preventing duplicate processing where appropriate.
+* Recovering gracefully from a failed file.
+* Cleaning up temporary resources.
+
+Do not display a completed status for a file that failed.
+
+Where batch processing is not supported by a particular tool, disable or explain that behavior instead of silently ignoring the queue.
+
+## 10. IMPROVE THE HOMEPAGE AND BROWSER TOOL LISTING
+
+Improve the existing homepage and all-tools page without destroying the established branding or replacing the site with a generic template.
+
+The interface should feel like a professional PDF utility platform.
+
+Keep the design fast, clean, responsive, and easy to understand.
+
+Improve:
+
+* Header and navigation.
+* Search.
+* Tool categories.
+* Tool cards.
+* Upload zones.
+* Empty states.
+* Processing indicators.
+* Success screens.
+* Error screens.
+* Mobile layout.
+* Accessibility.
+* Visual hierarchy.
+* Consistency between pages.
+
+Make it easy for users to browse available tools and discover their purpose.
+
+The tool listing must be generated from the actual tool configuration wherever possible instead of maintaining duplicate hard-coded lists.
+
+Add or repair:
+
+* Functional tool search.
+* Category filters.
+* Consistent tool names and descriptions.
+* Correct navigation for every tool.
+* Accurate availability labels.
+* Clear descriptions of supported file formats.
+* A useful empty state when search finds no results.
+
+Do not show a tool as ready when its implementation is missing.
+
+Ensure that direct navigation to a tool URL works and that browser refreshes do not break navigation.
+
+Use a consistent design system with accessible contrast in both themes.
+
+Do not add excessive animations or unnecessary visual clutter.
+
+## 11. IMPROVE SEARCH, ROUTING, AND GENERAL NAVIGATION
+
+Inspect `App.tsx`, `Header.tsx`, `SearchModal.tsx`, and all routing logic.
+
+Requirements:
+
+* Tool links must open the correct tools.
+* Browser Back and Forward navigation must work.
+* Direct tool URLs must load correctly.
+* Refreshing a tool page must not lose the route.
+* Search results must navigate correctly.
+* The interface must not display the wrong active tool after navigation.
+* Invalid routes must show a useful fallback.
+* Navigation should remain responsive.
+* Preserve existing startup behavior if it is useful, but avoid unnecessary delays or blocking animations.
+
+Do not introduce a large routing dependency unless it is actually necessary.
+
+## 12. SETTINGS MUST WORK
+
+Audit the existing settings page and `SettingsContext.tsx`.
+
+Check every available setting, including:
+
+* Theme.
+* Default page size.
+* Default image format.
+* Default image quality.
+* Default DPI.
+* Default compression mode.
+
+Each visible setting must actually influence the corresponding tool.
+
+If a setting has no implementation, either connect it properly or remove the misleading control.
+
+Persist supported preferences locally.
+
+Provide a reset-to-default option that works correctly.
+
+Ensure that resetting settings does not accidentally remove unrelated application data.
+
+## 13. SECURITY AND FILE HANDLING
+
+Treat all uploaded documents as untrusted input.
+
+Implement appropriate protections, including:
+
+* File type validation.
+* File size limits.
+* Sensible page-count and processing limits where necessary.
+* Input validation on the frontend and backend.
+* Safe error messages.
+* No unnecessary exposure of internal server errors.
+* No logging of sensitive document contents.
+* No logging of user passwords.
+* Temporary file cleanup.
+* Resource cleanup after processing.
+* Protection against accidental overwriting of user files.
+* Safe handling of filenames.
+* Correct CORS configuration for the actual deployment architecture.
+* No hard-coded secrets.
+* No API keys exposed in frontend code.
+* No use of `dangerouslySetInnerHTML` with untrusted content without appropriate sanitization.
+
+If server endpoints accept files, enforce limits on the server rather than trusting frontend validation alone.
+
+Ensure that processing failures do not leave temporary files behind.
+
+Do not weaken security merely to make a feature work.
+
+## 14. PREPARE FOR DEPLOYMENT ON VERCEL
+
+I intend to move the application from Render to Vercel after the required fixes.
+
+Do not perform a deployment now. Make the code ready for a deliberate migration.
+
+Inspect the current architecture carefully.
+
+The project currently contains:
+
+* React.
+* TypeScript.
+* Vite.
+* An Express server.
+* PDF libraries.
+* OCR functionality.
+* A server endpoint for PDF security operations.
+
+A standard Vercel frontend deployment and a conventional persistent Express server are not interchangeable.
+
+Therefore:
+
+1. Identify the frontend build requirements.
+2. Inspect `package.json` and `vite.config.ts`.
+3. Identify every API endpoint.
+4. Identify which endpoints depend on the current Express server.
+5. Identify any processing that depends on QPDF, Ghostscript, or other native executables.
+6. Identify any filesystem or persistent-storage assumptions.
+7. Identify any CORS and environment-variable requirements.
+8. Identify any functions that may exceed serverless execution limits.
+9. Identify any functions that are better executed locally in the browser.
+10. Propose and implement a deployment architecture appropriate for Vercel.
+
+Prefer browser-based PDF operations when practical.
+
+If backend operations are required, use an architecture supported by the intended hosting environment.
+
+Do not blindly move `server.ts` into a Vercel deployment and assume it will work.
+
+Do not break local development while preparing the deployment.
+
+Provide appropriate configuration files and a deployment checklist if needed.
+
+Do not invent environment variables or pretend external services are configured.
+
+## 15. PERFORMANCE AND RESPONSIVENESS
+
+Optimize the application for normal desktop and mobile browsers.
+
+Requirements:
+
+* Avoid unnecessary rerenders.
+* Avoid loading large libraries on pages where they are not needed, where practical.
+* Use lazy loading for heavy tools if appropriate.
+* Avoid unnecessarily rendering every page of a large PDF simultaneously.
+* Provide progress feedback for expensive operations.
+* Handle memory-intensive PDFs gracefully.
+* Revoke object URLs.
+* Clean up event listeners.
+* Cancel or ignore stale asynchronous operations when appropriate.
+* Prevent repeated clicks from triggering conflicting processing jobs.
+* Avoid blocking the interface during long operations when possible.
+
+Do not sacrifice correctness for small performance improvements.
+
+## 16. ACCESSIBILITY AND RESPONSIVE DESIGN
+
+Check the interface at desktop, tablet, and mobile widths.
+
+Implement:
+
+* Responsive navigation.
+* Responsive tool cards.
+* Usable upload zones.
+* Readable file lists.
+* Accessible buttons.
+* Keyboard-operable dialogs.
+* Visible focus states.
+* Accessible labels for icon-only buttons.
+* Appropriate color contrast.
+* Useful loading and error announcements.
+
+Ensure that drag-and-drop reordering is not the only way to reorder PDF pages.
+
+## 17. TESTING AND VERIFICATION
+
+After making the changes, verify the actual project.
+
+At a minimum:
+
+1. Install or validate dependencies.
+2. Run the TypeScript check.
+3. Run the production build.
+4. Fix all new compilation errors.
+5. Fix broken imports.
+6. Check the browser console for errors where browser execution is available.
+7. Test the light/dark theme.
+8. Test Reorder PDF Pages using a multi-page PDF.
+9. Test Merge PDF.
+10. Test Split PDF.
+11. Test Remove and Extract Pages.
+12. Test Rotate PDF.
+13. Test compression.
+14. Test image-to-PDF conversion.
+15. Test text extraction and OCR where available.
+16. Test Protect PDF and Unlock PDF where the necessary backend exists.
+17. Test the batch queue.
+18. Test direct navigation and refresh.
+19. Test settings persistence.
+20. Verify that downloaded outputs are real, valid files.
+
+Use actual PDF processing functions and verify the output, rather than only testing whether a button can be clicked.
+
+If a feature cannot be tested because a required native executable, browser environment, API key, or external service is unavailable, state that limitation explicitly.
+
+Do not report a test as passed if it was not performed.
+
+Do not conceal failures.
+
+## 18. IMPORTANT DEVELOPMENT RULES
+
+Follow these rules throughout the work:
+
+* Modify the existing codebase.
+* Preserve the existing visual identity where practical.
+* Reuse existing components and services.
+* Avoid unnecessary dependencies.
+* Avoid duplicating PDF processing logic.
+* Keep TypeScript types accurate.
+* Avoid `any` unless genuinely unavoidable.
+* Do not use fake implementations.
+* Do not return unchanged input files as successful conversions.
+* Do not add features that require unconfigured paid APIs.
+* Do not delete unrelated working functionality.
+* Do not replace real functionality with placeholders.
+* Do not hard-code my personal Windows paths into production code.
+* Do not assume that a feature works simply because the UI exists.
+* Do not leave TODO comments as a substitute for implementing an explicitly requested feature.
+
+If the work is too large to complete in one pass, prioritize foundational fixes and the highest-impact broken features first. Continue with the remaining work in subsequent passes without undoing completed work.
+
+## 19. FINAL DELIVERABLES
+
+When finished, provide:
+
+### A. Changes made
+
+A concise summary of the actual files changed and what was fixed.
+
+### B. Tool implementation audit
+
+A table showing each tool and whether it is:
+
+* Fully implemented and tested.
+* Implemented but not fully tested.
+* Partially implemented.
+* Blocked by a missing dependency or external service.
+* Not yet implemented.
+
+### C. Critical issues remaining
+
+List all unresolved issues, especially any that would prevent a successful Vercel deployment.
+
+### D. Verification results
+
+Report the actual TypeScript check and production build results.
+
+### E. Local testing instructions
+
+Provide the exact commands to run the updated project and test its important features.
+
+### F. Vercel migration preparation
+
+Explain which components can run in the browser, which require backend processing, and what additional configuration is necessary.
+
+### G. Next development priorities
+
+List the remaining work in the order it should be completed.
+
+## FINAL INSTRUCTION
+
+Start by examining the complete existing project. Then implement the repairs directly in its files.
+
+My priority is not simply making the interface look attractive. My priority is making the existing PDF tools genuinely work, fixing light/dark mode, repairing Reorder PDF Pages, improving compression, making file handling reliable, and preparing the application for a safe migration to Vercel.
+
+**Deliver a functioning application, not just a redesigned interface or a report describing what should be done.**

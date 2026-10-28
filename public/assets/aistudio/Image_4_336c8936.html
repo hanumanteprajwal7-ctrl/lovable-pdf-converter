@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#5fcdbf", "primary-fixed-dim": "#b8c4ff", "surface-container-low": "#eff4ff", "background": "#f8f9ff", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#3323cc", "primary": "#00288e", "on-secondary-container": "#fffbff", "on-error-container": "#93000a", "on-background": "#0b1c30", "tertiary": "#003c36", "on-secondary-fixed": "#0f0069", "surface-bright": "#f8f9ff", "secondary-fixed-dim": "#c3c0ff", "outline": "#757684", "surface-dim": "#cbdbf5", "on-primary-fixed": "#001453", "inverse-on-surface": "#eaf1ff", "surface-container-highest": "#d3e4fe", "on-tertiary-fixed": "#00201d", "on-surface": "#0b1c30", "secondary-container": "#645efb", "surface-container-high": "#dce9ff", "on-primary-fixed-variant": "#173bab", "on-surface-variant": "#444653", "on-secondary": "#ffffff", "surface-container-lowest": "#ffffff", "primary-fixed": "#dde1ff", "tertiary-container": "#00554e", "on-tertiary": "#ffffff", "surface-container": "#e5eeff", "on-tertiary-fixed-variant": "#005049", "surface-tint": "#3755c3", "on-error": "#ffffff", "tertiary-fixed": "#89f5e7", "surface": "#f8f9ff", "tertiary-fixed-dim": "#6bd8cb", "secondary": "#4b41e1", "secondary-fixed": "#e2dfff", "primary-container": "#1e40af", "inverse-primary": "#b8c4ff", "on-primary-container": "#a8b8ff", "surface-variant": "#d3e4fe", "inverse-surface": "#213145", "outline-variant": "#c4c5d5", "error": "#ba1a1a", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "margin": "2rem" }, "fontFamily": { "body-lg": [ "Inter" ], "headline-md": [ "Inter" ], "headline-lg-mobile": [ "Inter" ], "body-md": [ "Inter" ], "headline-sm": [ "Inter" ], "label-lg": [ "Inter" ], "label-sm": [ "Inter" ], "headline-lg": [ "Inter" ], "body-sm": [ "Inter" ], "label-md": [ "Inter" ], "display-lg-mobile": [ "Inter" ], "display-lg": [ "Inter" ] }, "fontSize": { "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "display-lg-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><img alt="ConvertFlow Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VgFwDUTGfbaKgwq1EoA5p5kE59Tmxmih0pIfLFAgkRAVgYk_tpb2ooPKCkkpFeKUE70u5rJe-DuMxR8YtWf4ws86qBOniGeFBSAA85Nggf--afEL-hQB38Rz2ld2g2Re5PzHWkIouL_1GMWO3EyNfVIkEKg5gagI1WY1piWQEEF8BE6qUEXJPkxSiZdr6RlRH9FYIC6CXTfm4Iz3fraKLnJgCVZwlIaqXDVLIbTV2b8drDGVSnceZS_Tc"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold">ConvertFlow</span></a><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-lg px-3 py-1.5"><a class="font-label-lg text-label-lg px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="home" href="#">Home</a><a class="font-label-lg text-label-lg px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="all-tools" href="#">All Tools</a><a class="font-label-lg text-label-lg px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="convert-pdf" href="#">Convert PDF</a><a aria-current="page" class="transition-colors bg-primary-container text-on-primary-container font-medium rounded-lg px-3 py-1.5" data-path="convert-to-pdf" href="#">Convert to PDF</a><a class="font-label-lg text-label-lg px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="compress-pdf" href="#">Compress PDF</a><a class="font-label-lg text-label-lg px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="ocr-and-extract-text" href="#">OCR &amp; Extract Text</a><a class="font-label-lg text-label-lg px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="edit-pdf" href="#">Edit PDF</a></nav></div><div class="flex items-center gap-space-sm"><button aria-label="Quick search conversion tools" class="flex items-center justify-center w-10 h-10 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><a class="hidden sm:inline-flex items-center px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors shadow-[0_1px_3px_rgba(15,23,42,0.05)]" data-path="batch-queue" href="#">Batch Queue</a><a class="inline-flex items-center px-4 py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-all active:scale-[0.98]" data-path="all-tools" href="#">Convert Now</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-16rem)]"><div class="flex flex-col w-full">
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/4 w-96 h-96 rounded-full bg-gradient-to-br from-primary-fixed/30 to-secondary-fixed/20 blur-3xl pointer-events-none"></div>
+<div class="absolute top-48 right-10 w-80 h-80 rounded-full bg-gradient-to-tr from-tertiary-fixed/25 to-surface-container-high/40 blur-2xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-gutter py-space-md w-full relative z-10">
+<!-- Breadcrumbs & Quick Session Status Bar -->
+<nav aria-label="Breadcrumb" class="flex flex-wrap items-center justify-between gap-space-sm mb-space-lg">
+<ol class="flex items-center space-x-2 font-label-md text-label-md text-on-surface-variant">
+<li>
+<a class="hover:text-primary transition-colors flex items-center gap-1" data-path="all-tools" href="#">
+<span class="material-symbols-outlined text-[16px]">grid_view</span>
+<span>All Tools</span>
+</a>
+</li>
+<li class="text-outline">/</li>
+<li>
+<a class="hover:text-primary transition-colors" data-path="convert-to-pdf" href="#">Convert to PDF</a>
+</li>
+<li class="text-outline">/</li>
+<li class="text-primary font-bold flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[15px]">image</span>
+<span>JPG to PDF</span>
+</li>
+</ol>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-low text-tertiary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span>
+            Hardware Accelerated Engine
+          </span>
+<button class="text-on-surface-variant hover:text-on-surface bg-surface-container-low hover:bg-surface-container-high p-1.5 rounded-lg transition-colors" title="Reset Workspace" type="button">
+<span class="material-symbols-outlined text-[20px]">restart_alt</span>
+</button>
+</div>
+</nav>
+<!-- Headline & Subtitle Studio Banner -->
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div>
+<div class="inline-flex items-center gap-2 mb-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold bg-secondary-fixed/40 px-2 py-0.5 rounded">Optical Composer</span>
+<span class="text-outline text-label-sm font-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Non-destructive rasterizer</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">
+            JPG to PDF Conversion Studio
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+            Reorder pages, set custom layout geometry, and compile high-resolution documents in seconds.
+          </p>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm bg-surface-container-lowest shadow-sm px-3.5 py-2 rounded-xl">
+<span class="material-symbols-outlined text-primary text-[18px]">security</span>
+<span>Client-side pre-processing • 0 KB leaked</span>
+</div>
+</header>
+<!-- Main Studio Workspace Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left / Center: Interactive Canvas Drop & Arrange Zone -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Workbench Action Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold px-2">Uploaded Images</span>
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold" id="file-counter-pill">4 files</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-all" id="rotate-all-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">rotate_right</span>
+                Rotate All (90°)
+              </button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg hover:bg-error-container text-error font-label-sm text-label-sm transition-all" id="clear-all-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">delete_sweep</span>
+                Clear
+              </button>
+</div>
+</div>
+<!-- Document Grid Canvas (Drag & Reorder) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md" id="cards-container">
+<!-- Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col" data-card-id="1">
+<div class="flex items-center justify-between px-3 py-2 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 cursor-grab active:cursor-grabbing text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">drag_indicator</span>
+<span class="bg-primary text-on-primary font-label-sm text-label-sm w-5 h-5 rounded-full flex items-center justify-center font-bold">1</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="rotate-card-btn p-1 rounded-md hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Rotate 90 degrees clockwise" type="button">
+<span class="material-symbols-outlined text-[18px]">rotate_90_degrees_cw</span>
+</button>
+<button class="delete-card-btn p-1 rounded-md hover:bg-error-container text-outline hover:text-error transition-colors" title="Remove page" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<div class="relative h-56 bg-surface-container flex items-center justify-center overflow-hidden p-3">
+<img class="card-image w-full h-full object-contain transition-transform duration-300 drop-shadow-sm" data-alt="High contrast overhead architectural blueprint and commercial invoice document on crisp white stock, geometric layout, sharp typography, neutral studio lighting with slate tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLTbDhGN5R_cGAXAxklVRDRAdBxOuHCN8ItZTyF7YczccqwrKpHolHwdtplqzen1HxyFUBFFop4fsHG5sLecY59x-bLeSTKRqqBY7pIVunJKpnQEa2Q-XRSX7R7zoK7Y7jGuOlp61t2cw9R4_ZJYX0PZ-y4uf84tXp1y5-8TjnCCr4fnL1f3ltFrhA3Z33pK6xDpiPs41jjJbmb7FcarUXTQM4IiVBFAr60DMl8Bv1_n2OAv5Z7SyJ" style="transform: rotate(0deg);"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold tracking-wider uppercase">JPG</span>
+</div>
+<div class="p-3 bg-surface-container-lowest flex items-center justify-between text-on-surface">
+<div class="min-w-0 pr-2">
+<p class="font-label-md text-label-md text-on-surface truncate font-medium">invoice_scan_01.jpg</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">2480 × 3508 • 1.2 MB</p>
+</div>
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">check_circle</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col" data-card-id="2">
+<div class="flex items-center justify-between px-3 py-2 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 cursor-grab active:cursor-grabbing text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">drag_indicator</span>
+<span class="bg-primary text-on-primary font-label-sm text-label-sm w-5 h-5 rounded-full flex items-center justify-center font-bold">2</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="rotate-card-btn p-1 rounded-md hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Rotate 90 degrees clockwise" type="button">
+<span class="material-symbols-outlined text-[18px]">rotate_90_degrees_cw</span>
+</button>
+<button class="delete-card-btn p-1 rounded-md hover:bg-error-container text-outline hover:text-error transition-colors" title="Remove page" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<div class="relative h-56 bg-surface-container flex items-center justify-center overflow-hidden p-3">
+<img class="card-image w-full h-full object-contain transition-transform duration-300 drop-shadow-sm" data-alt="Close up photograph of a neat thermal retail receipt with clean monospace typography, aligned figures, pale gray cast, crisp modern corporate aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO7DLtYCOKY0c4dClkvGGie0KizJMyhsKJ2Z7HE5vTOmITI9XzZjf_Bvc5l8sKsjUc4t6CXt9u-0D5nGSybnwSyjyuhk-tfxjMzaDh9abgBldCJumbZSq1Zu7k3e4lQvfzUzYGm-eaeN6JQAYZwfczzEnmfGNL3aLJ8qsp6O4jYLZDRWC8OZfQlv2KP7ro4Cz-AhaqaSd4S7JPsU8exEm5z3t38bIgBku6LN1jJDhTihDAvfcXgux6" style="transform: rotate(0deg);"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold tracking-wider uppercase">PNG</span>
+</div>
+<div class="p-3 bg-surface-container-lowest flex items-center justify-between text-on-surface">
+<div class="min-w-0 pr-2">
+<p class="font-label-md text-label-md text-on-surface truncate font-medium">receipt_feb.png</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">1200 × 2800 • 640 KB</p>
+</div>
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">check_circle</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col" data-card-id="3">
+<div class="flex items-center justify-between px-3 py-2 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 cursor-grab active:cursor-grabbing text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">drag_indicator</span>
+<span class="bg-primary text-on-primary font-label-sm text-label-sm w-5 h-5 rounded-full flex items-center justify-center font-bold">3</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="rotate-card-btn p-1 rounded-md hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Rotate 90 degrees clockwise" type="button">
+<span class="material-symbols-outlined text-[18px]">rotate_90_degrees_cw</span>
+</button>
+<button class="delete-card-btn p-1 rounded-md hover:bg-error-container text-outline hover:text-error transition-colors" title="Remove page" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<div class="relative h-56 bg-surface-container flex items-center justify-center overflow-hidden p-3">
+<img class="card-image w-full h-full object-contain transition-transform duration-300 drop-shadow-sm" data-alt="Legal service agreement page printed with signature block and corporate seal stamp, immaculate lighting, high sharpness, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_2xBfDOs6ZtDy1sQ_V9DAD7O_mKLQdOk3TedUBLljVbq9y8hYfLFzB8Ait7U9y21YQD8EtypTy42MAmGxw7wI8zzdPOomUr2aO3ay6Id5tvJt90pcthJK1usGjYfeGPY1fR8SOuBcyFS-kwPxoBXTEQX5m0jlyL_a2esJ7IYBK7nKSnI0MRRM2Au9gxe8Kq9UC7A7kYSF0J_beyEiIIUVoxUqJWIAojD33W05ut12ByzToNP58oDx" style="transform: rotate(0deg);"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold tracking-wider uppercase">JPG</span>
+</div>
+<div class="p-3 bg-surface-container-lowest flex items-center justify-between text-on-surface">
+<div class="min-w-0 pr-2">
+<p class="font-label-md text-label-md text-on-surface truncate font-medium">contract_p3.jpg</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">2550 × 3300 • 920 KB</p>
+</div>
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">check_circle</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden flex flex-col" data-card-id="4">
+<div class="flex items-center justify-between px-3 py-2 bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 cursor-grab active:cursor-grabbing text-outline hover:text-on-surface">
+<span class="material-symbols-outlined text-[18px]">drag_indicator</span>
+<span class="bg-primary text-on-primary font-label-sm text-label-sm w-5 h-5 rounded-full flex items-center justify-center font-bold">4</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="rotate-card-btn p-1 rounded-md hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Rotate 90 degrees clockwise" type="button">
+<span class="material-symbols-outlined text-[18px]">rotate_90_degrees_cw</span>
+</button>
+<button class="delete-card-btn p-1 rounded-md hover:bg-error-container text-outline hover:text-error transition-colors" title="Remove page" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<div class="relative h-56 bg-surface-container flex items-center justify-center overflow-hidden p-3">
+<img class="card-image w-full h-full object-contain transition-transform duration-300 drop-shadow-sm" data-alt="Vector technical flowchart diagram showing infrastructure nodes connected with deep blue lines on an off-white technical drawing paper layout" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8wTi10D_3HWsHQ6jSMw6hXvHW8Sh-xS4ACqsFUTJ9m-qr7YcWM4QJJfNcj0zeI2qynI1BbCubIlBZyC5f3YztHnjGUfeTyYrwZJR3VI5p3GxpKkpSFOlg03SiK_yoFJICH3M0_in5-hG0RvDZRAiQiD8_IL2wZBCMj4pw2NdafmmKdiWXu8YZCmPSd8nq9BtYihkgwVQ4Z9dsxT4gGCT2j1R_X525fyH51RXM-nS0sarEBmZiSM5z" style="transform: rotate(0deg);"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold tracking-wider uppercase">PNG</span>
+</div>
+<div class="p-3 bg-surface-container-lowest flex items-center justify-between text-on-surface">
+<div class="min-w-0 pr-2">
+<p class="font-label-md text-label-md text-on-surface truncate font-medium">diagram_flow.png</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">1920 × 1080 • 410 KB</p>
+</div>
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">check_circle</span>
+</div>
+</div>
+<!-- "Add More Files" Interactive Drop Tile -->
+<label class="relative flex flex-col items-center justify-center h-full min-h-[280px] p-6 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer group shadow-sm text-center">
+<input accept="image/jpeg,image/png,image/webp" class="sr-only" id="file-uploader-input" multiple="" type="file"/>
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed group-hover:scale-110 transition-transform shadow-sm mb-3">
+<span class="material-symbols-outlined text-[28px]">add_photo_alternate</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-1">Add More Files</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-[200px]">
+                Drop JPG, PNG, WEBP, or HEIC here or browse from device
+              </p>
+<span class="mt-4 inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-medium bg-surface-container-lowest px-3 py-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[15px]">cloud_upload</span> Select Files
+              </span>
+</label>
+</div>
+<!-- Bottom Micro Visual Aid: Page Flow Order Indicator -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">swap_vert</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Natural compilation order:</span>
+<span class="font-body-sm text-body-sm">From top-left to bottom-right. Drag to alter sequence.</span>
+</div>
+<div class="hidden sm:flex items-center gap-1 text-label-sm font-label-sm text-primary">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+<span>Drag handle enabled</span>
+</div>
+</div>
+</div>
+<!-- Right: Fixed / Floating PDF Configuration Workbench -->
+<aside class="lg:col-span-4 sticky top-20 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Document Setup</h2>
+</div>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container-high text-on-surface-variant font-medium">Standard PDF 1.7</span>
+</div>
+<!-- Page Orientation Control -->
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Page Orientation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-normal" id="orientation-indicator">Auto / Mixed</span>
+</span>
+<div class="grid grid-cols-2 gap-2 p-1 bg-surface-container-low rounded-lg" id="orientation-toggle-group">
+<button class="orientation-btn flex items-center justify-center gap-2 py-2 px-3 rounded-md bg-surface-container-lowest text-primary shadow-sm font-label-md text-label-md font-medium transition-all" data-val="portrait" type="button">
+<span class="material-symbols-outlined text-[18px]">crop_portrait</span>
+                  Portrait
+                </button>
+<button class="orientation-btn flex items-center justify-center gap-2 py-2 px-3 rounded-md text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-all" data-val="landscape" type="button">
+<span class="material-symbols-outlined text-[18px]">crop_landscape</span>
+                  Landscape
+                </button>
+</div>
+</div>
+<!-- Page Size Selector -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between" for="page-size-select">
+<span>Page Geometry</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Default ISO</span>
+</label>
+<div class="relative">
+<select class="w-full h-11 px-3 bg-surface-container-low text-on-surface font-body-md text-body-md rounded-lg appearance-none cursor-pointer focus:outline-none focus:bg-surface-container-high transition-colors" id="page-size-select">
+<option selected="" value="A4">A4 (210 × 297 mm)</option>
+<option value="US-Letter">US Letter (8.5 × 11 in)</option>
+<option value="Fit">Fit to Image (No Padding Canvas)</option>
+<option value="A3">A3 (297 × 420 mm)</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Margins Selection -->
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Margin Spacing</span>
+<div class="grid grid-cols-3 gap-1.5 p-1 bg-surface-container-low rounded-lg" id="margin-toggle-group">
+<button class="margin-btn py-1.5 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface text-center transition-all" data-margin="none" type="button">
+                  None
+                </button>
+<button class="margin-btn py-1.5 px-2 rounded-md bg-surface-container-lowest text-primary shadow-sm font-label-md text-label-md font-semibold text-center transition-all" data-margin="small" type="button">
+                  Small (10mm)
+                </button>
+<button class="margin-btn py-1.5 px-2 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface text-center transition-all" data-margin="big" type="button">
+                  Big (20mm)
+                </button>
+</div>
+</div>
+<!-- Merge Options Switch -->
+<div class="pt-2">
+<label class="flex items-start gap-3 cursor-pointer select-none bg-surface-container-low/60 hover:bg-surface-container-low p-3 rounded-lg transition-colors">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary" id="merge-checkbox" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-medium text-on-surface">Merge all into single PDF</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Uncheck to generate separate PDFs in a ZIP archive</span>
+</div>
+</label>
+</div>
+<!-- Live Document Metrics Pill -->
+<div class="p-3 rounded-xl bg-surface-container-high/60 flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">picture_as_pdf</span>
+<span class="font-label-md text-label-md font-semibold" id="doc-summary-text">4 pages</span>
+</div>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span>Estimated</span>
+<span class="font-semibold text-on-surface bg-surface-container-lowest px-2 py-0.5 rounded shadow-sm" id="doc-size-est">~2.4 MB</span>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full py-3.5 px-5 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg font-semibold hover:bg-primary-container shadow-md hover:shadow-lg transition-all duration-200 active:scale-[0.98] flex items-center justify-center gap-2" id="convert-now-trigger" type="button">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span>Convert to PDF</span>
+</button>
+<!-- Trust Meta Info -->
+<div class="flex items-center justify-center gap-4 text-outline font-label-sm text-label-sm pt-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span> Encrypted
+              </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">delete</span> Auto-deleted
+              </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span> Instant
+              </span>
+</div>
+</div>
+<!-- Quick Tip Card -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">lightbulb</span>
+<div class="text-on-surface">
+<h4 class="font-label-lg text-label-lg font-semibold mb-0.5">Pro Tip: Image Quality</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">ConvertFlow retains original DPI matrix so full-text OCR scan clarity remains intact upon download.</p>
+</div>
+</div>
+</aside>
+</div>
+<!-- SUCCESS & DOWNLOAD SECTION / MODAL PANEL -->
+<section class="mt-space-xl bg-surface-container-lowest rounded-2xl shadow-xl overflow-hidden transition-all duration-500" id="success-download-panel">
+<div class="p-space-lg sm:p-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg bg-gradient-to-r from-surface-container-lowest via-surface-container-low to-surface-container-lowest">
+<!-- Left: Conversion Success Message & Metrics -->
+<div class="flex items-start gap-space-md max-w-xl">
+<div class="w-14 h-14 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary shadow-md shrink-0">
+<span class="material-symbols-outlined text-[32px]">check_circle</span>
+</div>
+<div class="flex flex-col">
+<div class="inline-flex items-center gap-2 mb-1">
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold uppercase tracking-wider">Complete</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ready in 0.8 seconds</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+                Your PDF is ready!
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                Combined 4 images into <span class="font-semibold text-on-surface">ConvertFlow_Package_2025.pdf</span>. Document structure validated and compressed by 25%.
+              </p>
+<!-- Conversion Metric Sparks -->
+<div class="flex items-center gap-3 mt-3">
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-1 rounded text-on-surface font-medium">Original: 3.1 MB</span>
+<span class="material-symbols-outlined text-outline text-[16px]">arrow_forward</span>
+<span class="text-label-sm font-label-sm bg-tertiary-fixed-dim/40 px-2.5 py-1 rounded text-tertiary font-bold">Optimized: 1.8 MB (-42%)</span>
+</div>
+</div>
+</div>
+<!-- Right: Main CTA and Multi-destination actions -->
+<div class="flex flex-col sm:flex-row md:flex-col items-stretch gap-2.5 w-full md:w-auto min-w-[280px]">
+<a class="py-3.5 px-6 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-primary-container hover:shadow-lg transition-all flex items-center justify-center gap-2 text-center active:scale-[0.98]" download="ConvertFlow_Package_2025.pdf" href="#">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Download PDF (1.8 MB)</span>
+</a>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2.5 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-medium transition-all flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">add_to_drive</span>
+<span>Google Drive</span>
+</button>
+<button class="py-2.5 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md font-medium transition-all flex items-center justify-center gap-1.5" id="copy-link-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">link</span>
+<span id="copy-btn-label">Copy Link</span>
+</button>
+</div>
+<button class="py-2 px-3 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm text-center transition-colors flex items-center justify-center gap-1" id="convert-another-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Convert Another Batch</span>
+</button>
+</div>
+</div>
+<!-- Integrated Secondary Tool Strip -->
+<div class="bg-surface-container-low px-space-lg py-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary">verified_user</span>
+<span>Zero-logging pipeline: This file expires and erases from temporary cloud cache in <strong class="text-on-surface font-semibold">01:59:42</strong></span>
+</div>
+<div class="flex items-center gap-3">
+<a class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-1" data-path="compress-pdf" href="#">
+              Compress this file <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+<span class="text-outline">•</span>
+<a class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-1" data-path="ocr-and-extract-text" href="#">
+              Run OCR <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Supported Conversion Matrix Overview (Rich Utility Visual) -->
+<section class="mt-space-xl pt-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Recommended Next Operations</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Frequently paired workflows for JPG to PDF documents.</p>
+</div>
+<a class="text-primary font-label-md text-label-md hover:underline inline-flex items-center gap-1 mt-2 md:mt-0" data-path="all-tools" href="#">
+            Browse all 28 tools <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<a class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-path="compress-pdf" href="#">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">compress</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">Save up to 85%</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface group-hover:text-primary transition-colors">Compress PDF</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Shrink output document size without optical degrading.</p>
+</div>
+</a>
+<a class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-path="ocr-and-extract-text" href="#">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-[20px]">document_scanner</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">AI Powered</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface group-hover:text-secondary transition-colors">OCR &amp; Extract</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Transform image scans into selectable, searchable text.</p>
+</div>
+</a>
+<a class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-path="edit-pdf" href="#">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-tertiary flex items-center justify-center group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+<span class="material-symbols-outlined text-[20px]">draw</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Annotate</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface group-hover:text-tertiary transition-colors">Sign &amp; Edit PDF</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Add legal signatures, redactions, and watermarks.</p>
+</div>
+</a>
+<a class="group p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-path="convert-pdf" href="#">
+<div class="flex items-center justify-between mb-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">transform</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Office Vector</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface group-hover:text-primary transition-colors">PDF to Word</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Turn completed documents into fully editable DOCX files.</p>
+</div>
+</a>
+</div>
+</section>
+</div>
+</div>
+<script>
+    (function initWorkspaceInteractions() {
+      // Rotation state tracking
+      const cardRotations = { 1: 0, 2: 0, 3: 0, 4: 0 };
+
+      // Rotate Individual Cards
+      document.querySelectorAll('.rotate-card-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const card = btn.closest('[data-card-id]');
+          if (!card) return;
+          const id = card.getAttribute('data-card-id');
+          cardRotations[id] = (cardRotations[id] || 0) + 90;
+          const img = card.querySelector('.card-image');
+          if (img) {
+            img.style.transform = `rotate(${cardRotations[id]}deg)`;
+          }
+        });
+      });
+
+      // Rotate All
+      const rotateAllBtn = document.getElementById('rotate-all-btn');
+      if (rotateAllBtn) {
+        rotateAllBtn.addEventListener('click', () => {
+          document.querySelectorAll('[data-card-id]').forEach(card => {
+            const id = card.getAttribute('data-card-id');
+            cardRotations[id] = (cardRotations[id] || 0) + 90;
+            const img = card.querySelector('.card-image');
+            if (img) {
+              img.style.transform = `rotate(${cardRotations[id]}deg)`;
+            }
+          });
+        });
+      }
+
+      // Delete Individual Cards
+      function updateCardCount() {
+        const remaining = document.querySelectorAll('#cards-container [data-card-id]').length;
+        const pill = document.getElementById('file-counter-pill');
+        const summary = document.getElementById('doc-summary-text');
+        const sizeEst = document.getElementById('doc-size-est');
+        if (pill) pill.textContent = `${remaining} files`;
+        if (summary) summary.textContent = `${remaining} pages`;
+        if (sizeEst) {
+          const mb = (remaining * 0.6).toFixed(1);
+          sizeEst.textContent = `~${mb} MB`;
+        }
+      }
+
+      document.querySelectorAll('.delete-card-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const card = btn.closest('[data-card-id]');
+          if (card) {
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+              card.remove();
+              updateCardCount();
+            }, 180);
+          }
+        });
+      });
+
+      // Clear all
+      const clearAllBtn = document.getElementById('clear-all-btn');
+      if (clearAllBtn) {
+        clearAllBtn.addEventListener('click', () => {
+          document.querySelectorAll('#cards-container [data-card-id]').forEach(card => card.remove());
+          updateCardCount();
+        });
+      }
+
+      // Orientation Selector
+      const orientationBtns = document.querySelectorAll('.orientation-btn');
+      const orientationLabel = document.getElementById('orientation-indicator');
+      orientationBtns.forEach(b => {
+        b.addEventListener('click', () => {
+          orientationBtns.forEach(btn => {
+            btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+            btn.classList.add('text-on-surface-variant');
+          });
+          b.classList.remove('text-on-surface-variant');
+          b.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+          if (orientationLabel) {
+            orientationLabel.textContent = b.getAttribute('data-val') === 'portrait' ? 'Vertical 3:4' : 'Horizontal 16:9';
+          }
+        });
+      });
+
+      // Margin Selector
+      const marginBtns = document.querySelectorAll('.margin-btn');
+      marginBtns.forEach(b => {
+        b.addEventListener('click', () => {
+          marginBtns.forEach(btn => {
+            btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+            btn.classList.add('text-on-surface-variant');
+          });
+          b.classList.remove('text-on-surface-variant');
+          b.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm', 'font-semibold');
+        });
+      });
+
+      // Convert Button Trigger with Micro Smooth Scroll to Result
+      const convertTrigger = document.getElementById('convert-now-trigger');
+      const successPanel = document.getElementById('success-download-panel');
+      if (convertTrigger && successPanel) {
+        convertTrigger.addEventListener('click', () => {
+          convertTrigger.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">refresh</span><span>Processing...</span>';
+          setTimeout(() => {
+            convertTrigger.innerHTML = '<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span><span>Convert to PDF</span>';
+            successPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            successPanel.classList.add('ring-2', 'ring-primary');
+            setTimeout(() => successPanel.classList.remove('ring-2', 'ring-primary'), 1200);
+          }, 450);
+        });
+      }
+
+      // Copy Link Button Feedback
+      const copyBtn = document.getElementById('copy-link-btn');
+      const copyLabel = document.getElementById('copy-btn-label');
+      if (copyBtn && copyLabel) {
+        copyBtn.addEventListener('click', () => {
+          copyLabel.textContent = 'Copied!';
+          setTimeout(() => {
+            copyLabel.textContent = 'Copy Link';
+          }, 1800);
+        });
+      }
+
+      // Convert Another Batch
+      const convertAnother = document.getElementById('convert-another-btn');
+      if (convertAnother) {
+        convertAnother.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] mt-space-xl"><div class="max-w-7xl mx-auto px-gutter pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg pb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="ConvertFlow Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VgFwDUTGfbaKgwq1EoA5p5kE59Tmxmih0pIfLFAgkRAVgYk_tpb2ooPKCkkpFeKUE70u5rJe-DuMxR8YtWf4ws86qBOniGeFBSAA85Nggf--afEL-hQB38Rz2ld2g2Re5PzHWkIouL_1GMWO3EyNfVIkEKg5gagI1WY1piWQEEF8BE6qUEXJPkxSiZdr6RlRH9FYIC6CXTfm4Iz3fraKLnJgCVZwlIaqXDVLIbTV2b8drDGVSnceZS_Tc"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold">ConvertFlow</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">High-performance PDF and image conversion infrastructure built for secure, precision document transformation and micro-tactile workflows.</p><div class="inline-flex items-center gap-space-sm px-3.5 py-2 rounded-lg bg-surface-container-low text-on-surface w-fit"><span class="material-symbols-outlined text-tertiary-container text-[18px]">lock</span><span class="font-label-sm text-label-sm text-on-surface-variant">256-bit SSL encrypted &amp; auto-deleted after 2 hours</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg text-on-surface font-semibold">Conversion Tools</span><nav class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="convert-pdf" href="#">Convert PDF</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="convert-to-pdf" href="#">Convert to PDF</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="compress-pdf" href="#">Compress PDF</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="ocr-and-extract-text" href="#">OCR &amp; Extract Text</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="edit-pdf" href="#">Edit PDF</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg text-on-surface font-semibold">Supported Formats</span><nav class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="supported-formats" href="#">PDF to Word (DOCX)</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="supported-formats" href="#">PDF to Excel (XLSX)</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="supported-formats" href="#">Image to PDF (JPG, PNG)</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="supported-formats" href="#">PDF to High-Res PNG</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="supported-formats" href="#">Full Format Matrix</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg text-on-surface font-semibold">Company &amp; Legal</span><nav class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="#">FAQ</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms</a></nav></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm bg-surface-container-low/50 px-space-md py-space-sm rounded-lg"><span class="font-body-sm text-body-sm text-on-surface-variant">© 2025 ConvertFlow Inc. All rights reserved. Zero-logging document pipeline.</span><div class="flex items-center gap-space-md"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">ISO 27001 • SOC 2 Type II Compliant</span></div></div></div></footer></body></html>

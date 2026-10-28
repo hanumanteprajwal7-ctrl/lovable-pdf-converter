@@ -1,0 +1,228 @@
+---
+name: ConvertFlow Studio
+colors:
+  surface: '#f8f9ff'
+  surface-dim: '#cbdbf5'
+  surface-bright: '#f8f9ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#eff4ff'
+  surface-container: '#e5eeff'
+  surface-container-high: '#dce9ff'
+  surface-container-highest: '#d3e4fe'
+  on-surface: '#0b1c30'
+  on-surface-variant: '#444653'
+  inverse-surface: '#213145'
+  inverse-on-surface: '#eaf1ff'
+  outline: '#757684'
+  outline-variant: '#c4c5d5'
+  surface-tint: '#3755c3'
+  primary: '#00288e'
+  on-primary: '#ffffff'
+  primary-container: '#1e40af'
+  on-primary-container: '#a8b8ff'
+  inverse-primary: '#b8c4ff'
+  secondary: '#4b41e1'
+  on-secondary: '#ffffff'
+  secondary-container: '#645efb'
+  on-secondary-container: '#fffbff'
+  tertiary: '#003c36'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#00554e'
+  on-tertiary-container: '#5fcdbf'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#dde1ff'
+  primary-fixed-dim: '#b8c4ff'
+  on-primary-fixed: '#001453'
+  on-primary-fixed-variant: '#173bab'
+  secondary-fixed: '#e2dfff'
+  secondary-fixed-dim: '#c3c0ff'
+  on-secondary-fixed: '#0f0069'
+  on-secondary-fixed-variant: '#3323cc'
+  tertiary-fixed: '#89f5e7'
+  tertiary-fixed-dim: '#6bd8cb'
+  on-tertiary-fixed: '#00201d'
+  on-tertiary-fixed-variant: '#005049'
+  background: '#f8f9ff'
+  on-background: '#0b1c30'
+  surface-variant: '#d3e4fe'
+typography:
+  display-lg:
+    fontFamily: Inter
+    fontSize: 48px
+    fontWeight: '700'
+    lineHeight: 56px
+    letterSpacing: -0.02em
+  display-lg-mobile:
+    fontFamily: Inter
+    fontSize: 32px
+    fontWeight: '700'
+    lineHeight: 40px
+    letterSpacing: -0.015em
+  headline-lg:
+    fontFamily: Inter
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: 40px
+    letterSpacing: -0.015em
+  headline-lg-mobile:
+    fontFamily: Inter
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Inter
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Inter
+    fontSize: 18px
+    fontWeight: '600'
+    lineHeight: 26px
+    letterSpacing: -0.005em
+  body-lg:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+    letterSpacing: '0'
+  body-md:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+    letterSpacing: '0'
+  body-sm:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+    letterSpacing: '0'
+  label-lg:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '500'
+    lineHeight: 20px
+    letterSpacing: 0.01em
+  label-md:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+    letterSpacing: 0.02em
+  label-sm:
+    fontFamily: Inter
+    fontSize: 11px
+    fontWeight: '600'
+    lineHeight: 14px
+    letterSpacing: 0.04em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 1rem
+  margin: 2rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+The design system establishes a high-utility, precision-first conversion workspace. Built for knowledge workers, students, legal professionals, and digital operators, the platform emphasizes structural clarity, instantaneous document processing feedback, and effortless file manipulation.
+
+### Design Movement: Modern Corporate Utility
+The aesthetic balances precision productivity tools with restrained digital polish. It draws from modern operational interfaces:
+- **Structural White Space:** Expansive canvas zones with high contrast between functional tools and active working documents.
+- **Micro-tactility:** Interactive states deliver precise depth changes—soft borders, crisp elevation changes on file hovers, and clean optical boundaries.
+- **Zero-Cognitive-Friction:** Tool switchers, conversion pipelines, and drag-and-drop dropzones prioritize immediate affordance over purely decorative flourishes.
+
+## Colors
+
+The palette leverages authoritative deep blues to communicate document security and processing integrity, paired with vibrant indigo for interactive triggers, subtle teal for verified/success states, and slate-derived neutrals for clear hierarchies.
+
+### Role Assignments
+- **Primary (`#1E40AF` / `#1D4ED8`):** Dominates primary CTAs, active tool tab indicators, file progress bars, and header brands.
+- **Secondary (`#4F46E5`):** Reserved for tool capability accents, batch-action badges, and interactive hover highlights.
+- **Tertiary (`#0D9488`):** Handles successful conversion completion, verified cryptographic hashes, and download readiness indicators.
+- **Neutrals & Surfaces:**
+  - `Canvas / Base`: `#FFFFFF`
+  - `Workspace / Dropzones`: `#F8FAFC`
+  - `Active Tool Containers / Sidebars`: `#F1F5F9`
+  - `Card & Control Borders`: `#E2E8F0`
+  - `Body Copy`: `#0F172A`
+  - `Muted Metadata`: `#64748B`
+
+## Typography
+
+The typography relies strictly on `Inter` across all functional roles to ensure maximum legibility at varying scales, especially when presenting granular file specs (DPI, color profiles, megabytes, page counts).
+
+- **Headings:** Tight letter tracking (`-0.01em` to `-0.02em`) gives headlines a crisp, modern density.
+- **Labels & Data Tags:** Semi-bold weight with micro-letter-spacing (`0.02em` to `0.04em`) ensures file extension badges (e.g., `PDF`, `WEBP`, `DOCX`) remain sharp at small sizes.
+- **Tabular Figures:** All conversion metrics, percentage bars, and file counters must implement `font-variant-numeric: tabular-nums` to avoid layout jitter during active uploads and conversions.
+
+## Layout & Spacing
+
+The layout is built on a responsive 12-column fluid grid system anchored by a strict 4px/8px vertical rhythm.
+
+### Grid & Breakpoints
+- **Desktop (1280px+):** 12 columns, 24px (`1.5rem`) gutters, maximum content width capped at 1360px.
+- **Tablet (768px – 1279px):** 8 columns, 20px gutters, 24px margins. Workspaces shift side-by-side toolbars into collapsible top ribbons.
+- **Mobile (< 768px):** 4 columns, 16px (`1rem`) gutters, 16px (`1rem`) margins. Conversion pipelines collapse into sequential vertical stacks.
+
+### Rhythm & Alignment
+Sectional paddings utilize `space-xl` (40px) for macro separation, while interactive controls use `space-sm` (8px) and `space-md` (16px) internally to keep tool panels compact and data-dense.
+
+## Elevation & Depth
+
+Visual hierarchy uses ambient slate-tinted shadows paired with crisp border outlines (`#E2E8F0`), preventing muddy overlays and maintaining high legibility against `#F8FAFC` workspaces.
+
+### Elevation Levels
+- **Level 0 (Flat Canvas / Active Dropzones):** No shadow. 1px solid `#E2E8F0` border. When dragging over, transitions to a dashed 2px `#1D4ED8` border with `#EFF6FF` fill.
+- **Level 1 (Cards & Work Benches):** `0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.05)`. Used for resting document cards, configuration panels, and tool selection blocks.
+- **Level 2 (Hover & Active Drag State):** `0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05)`. Used when hovering cards or picking up file items to reorder pages.
+- **Level 3 (Overlays, Modals & Menus):** `0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04)`. Used for batch conversion options, export menus, and PDF preview lightboxes.
+
+## Shapes
+
+The interface balances soft ergonomics with structural discipline. Core cards and primary interactive zones feature generous rounding (`rounded-xl` / 24px on outer boundaries), while inner tool items retain precise, compact radii to conserve screen estate.
+
+### Geometry Specifications
+- **Cards & Workspace Viewports:** Radius token `rounded-xl` (1.5rem / 24px) creates distinct workspace groupings.
+- **Buttons, Inputs & Dropdowns:** Radius token `rounded-lg` (0.75rem / 12px) for a natural, tactile grip.
+- **Badges & File Format Tags:** Radius token `rounded-md` (0.375rem / 6px) to keep small text sharp and contained.
+
+## Components
+
+### Buttons
+- **Primary:** Deep Blue (`#1E40AF`) background, `#FFFFFF` text, `rounded-lg` (12px), height 44px (desktop) / 40px (compact). Hover states transition to `#1D4ED8`. Active state scales subtly (`scale: 0.98`).
+- **Secondary:** Surface `#FFFFFF`, border 1px solid `#E2E8F0`, text `#0F172A`. Hover: background `#F8FAFC`, border `#CBD5E1`.
+- **Ghost/Tertiary:** Transparent background, text `#4F46E5`. Hover: background `#EEF2FF`.
+
+### Tool Badges & Chips
+- **Format Badges (PDF, PNG, JPG, OCR):** Inset padding `2px 8px`, `rounded-md`, `label-sm` uppercase. Deep blue tint for input formats (`#EFF6FF` bg, `#1E40AF` text), secondary indigo tint for output formats (`#EEF2FF` bg, `#4F46E5` text).
+- **Filter Chips:** 32px height, soft border `#E2E8F0`, toggleable between `#FFFFFF` resting state and `#1E40AF` filled active state.
+
+### File Conversion Dropzone & Cards
+- **Dropzone Canvas:** Background `#F8FAFC`, minimum height 280px, inset outline 2px dashed `#CBD5E1`, `rounded-xl`. Transitions to `#EFF6FF` fill and `#1E40AF` outline on drag-over.
+- **Document Queue Cards:** `#FFFFFF` background, 1px solid `#E2E8F0`, `rounded-xl` (24px), elevation Level 1. Features 48px square thumbnail preview, file name with truncated middle, file size, target format dropdown, and an inline conversion progress bar.
+
+### Input Fields & Controls
+- **Inputs:** Height 42px, background `#FFFFFF`, border 1px solid `#E2E8F0`, font `Inter` 14px. Focus state: outline none, box-shadow `0 0 0 3px rgba(30, 64, 175, 0.15)`, border-color `#1E40AF`.
+- **Checkboxes & Radios:** 18px square/circle, border 1.5px solid `#CBD5E1`. Checked state: background `#1E40AF`, white icon checkmark, zero layout jump.
+
+### Conversion Progress Bar
+- Height: 6px, track background `#E2E8F0`, filled bar `#1E40AF` transitioning to `#0D9488` upon 100% completion with a smooth ease-in-out curve.

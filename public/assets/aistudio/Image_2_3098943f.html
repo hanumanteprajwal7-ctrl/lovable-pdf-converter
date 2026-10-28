@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-container": "#5fcdbf", "primary-fixed-dim": "#b8c4ff", "surface-container-low": "#eff4ff", "background": "#f8f9ff", "error-container": "#ffdad6", "on-secondary-fixed-variant": "#3323cc", "primary": "#00288e", "on-secondary-container": "#fffbff", "on-error-container": "#93000a", "on-background": "#0b1c30", "tertiary": "#003c36", "on-secondary-fixed": "#0f0069", "surface-bright": "#f8f9ff", "secondary-fixed-dim": "#c3c0ff", "outline": "#757684", "surface-dim": "#cbdbf5", "on-primary-fixed": "#001453", "inverse-on-surface": "#eaf1ff", "surface-container-highest": "#d3e4fe", "on-tertiary-fixed": "#00201d", "on-surface": "#0b1c30", "secondary-container": "#645efb", "surface-container-high": "#dce9ff", "on-primary-fixed-variant": "#173bab", "on-surface-variant": "#444653", "on-secondary": "#ffffff", "surface-container-lowest": "#ffffff", "primary-fixed": "#dde1ff", "tertiary-container": "#00554e", "on-tertiary": "#ffffff", "surface-container": "#e5eeff", "on-tertiary-fixed-variant": "#005049", "surface-tint": "#3755c3", "on-error": "#ffffff", "tertiary-fixed": "#89f5e7", "surface": "#f8f9ff", "tertiary-fixed-dim": "#6bd8cb", "secondary": "#4b41e1", "secondary-fixed": "#e2dfff", "primary-container": "#1e40af", "inverse-primary": "#b8c4ff", "on-primary-container": "#a8b8ff", "surface-variant": "#d3e4fe", "inverse-surface": "#213145", "outline-variant": "#c4c5d5", "error": "#ba1a1a", "on-primary": "#ffffff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-lg": "1.5rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "gutter-mobile": "1rem", "space-sm": "0.5rem", "margin": "2rem" }, "fontFamily": { "body-lg": [ "Inter" ], "headline-md": [ "Inter" ], "headline-lg-mobile": [ "Inter" ], "body-md": [ "Inter" ], "headline-sm": [ "Inter" ], "label-lg": [ "Inter" ], "label-sm": [ "Inter" ], "headline-lg": [ "Inter" ], "body-sm": [ "Inter" ], "label-md": [ "Inter" ], "display-lg-mobile": [ "Inter" ], "display-lg": [ "Inter" ] }, "fontSize": { "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "display-lg-mobile": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "display-lg": [ "48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 max-w-7xl mx-auto px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="home" href="#"><img alt="ConvertFlow Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VgFwDUTGfbaKgwq1EoA5p5kE59Tmxmih0pIfLFAgkRAVgYk_tpb2ooPKCkkpFeKUE70u5rJe-DuMxR8YtWf4ws86qBOniGeFBSAA85Nggf--afEL-hQB38Rz2ld2g2Re5PzHWkIouL_1GMWO3EyNfVIkEKg5gagI1WY1piWQEEF8BE6qUEXJPkxSiZdr6RlRH9FYIC6CXTfm4Iz3fraKLnJgCVZwlIaqXDVLIbTV2b8drDGVSnceZS_Tc"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold">ConvertFlow</span></a><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-medium rounded-lg px-3 py-1.5"><a aria-current="page" class="transition-colors bg-primary-container text-on-primary-container font-medium rounded-lg px-3 py-1.5" data-path="home" href="#">Home</a><a class="font-label-lg text-label-lg px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="all-tools" href="#">All Tools</a><a class="font-label-lg text-label-lg px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="convert-pdf" href="#">Convert PDF</a><a class="font-label-lg text-label-lg px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="convert-to-pdf" href="#">Convert to PDF</a><a class="font-label-lg text-label-lg px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="compress-pdf" href="#">Compress PDF</a><a class="font-label-lg text-label-lg px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="ocr-and-extract-text" href="#">OCR &amp; Extract Text</a><a class="font-label-lg text-label-lg px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" data-path="edit-pdf" href="#">Edit PDF</a></nav></div><div class="flex items-center gap-space-sm"><button aria-label="Quick search conversion tools" class="flex items-center justify-center w-10 h-10 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><a class="hidden sm:inline-flex items-center px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg hover:bg-surface-container-high hover:text-on-surface transition-colors shadow-[0_1px_3px_rgba(15,23,42,0.05)]" data-path="batch-queue" href="#">Batch Queue</a><a class="inline-flex items-center px-4 py-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container transition-all active:scale-[0.98]" data-path="all-tools" href="#">Convert Now</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-16rem)]"><div class="flex flex-col w-full">
+<!-- Macro Hero Section -->
+<section class="relative w-full px-gutter max-w-7xl mx-auto pt-space-lg pb-space-xl overflow-hidden">
+<!-- Ambient subtle background glow shapes -->
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[340px] bg-gradient-to-b from-primary-fixed/40 via-surface-container-high/20 to-transparent blur-3xl pointer-events-none -z-10 rounded-full"></div>
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto space-y-space-md">
+<div class="inline-flex items-center gap-space-xs px-3.5 py-1.5 rounded-full bg-surface-container-high text-primary shadow-sm">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Zero-Log Document Architecture</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">
+        All Your PDF Tools in One Place
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+        Convert, compress, edit, and extract text from your documents with ease. Built for instant browser processing and high-precision outputs.
+      </p>
+</div>
+<!-- Active Dropzone & Interactive Queue Canvas -->
+<div class="mt-space-lg max-w-4xl mx-auto">
+<div class="relative group bg-surface-container-lowest rounded-xl p-space-xl shadow-md transition-all duration-300 cursor-pointer overflow-hidden flex flex-col items-center justify-center text-center min-h-[300px]" id="dropzone">
+<!-- Dashed aesthetic perimeter via pseudo background or SVG -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none text-outline-variant/60 group-hover:text-primary transition-colors" preserveaspectratio="none">
+<rect fill="none" height="calc(100% - 4px)" rx="12" stroke="currentColor" stroke-dasharray="8 6" stroke-width="2" width="calc(100% - 4px)" x="2" y="2"></rect>
+</svg>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-low flex items-center justify-center text-primary group-hover:scale-105 transition-transform duration-200 shadow-sm">
+<span class="material-symbols-outlined text-[36px]">cloud_upload</span>
+</div>
+<div class="mt-space-md space-y-1">
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+              Drag &amp; drop files here
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              or select from your local drive, cloud storage, or URL
+            </p>
+</div>
+<div class="mt-space-md flex flex-wrap items-center justify-center gap-space-sm">
+<label class="inline-flex items-center gap-space-xs px-6 py-3 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary transition-all active:scale-[0.98] cursor-pointer" for="file-input">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Select Files</span>
+</label>
+<input class="hidden" id="file-input" multiple="" type="file"/>
+<button class="inline-flex items-center gap-space-xs px-4 py-3 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">link</span>
+<span>Add from URL</span>
+</button>
+</div>
+<!-- Format Badges -->
+<div class="mt-space-lg flex flex-wrap items-center justify-center gap-space-xs max-w-lg">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm uppercase font-semibold">PDF</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm uppercase font-semibold">JPG</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm uppercase font-semibold">PNG</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm uppercase font-semibold">DOCX</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm uppercase font-semibold">XLSX</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm uppercase font-semibold">PPTX</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant pl-1">+ 20 formats up to 100MB</span>
+</div>
+</div>
+</div>
+<!-- Trust Bar -->
+<div class="mt-space-md flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">lock</span>
+<span>256-bit SSL encryption</span>
+</div>
+<span class="text-outline-variant hidden sm:inline">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">schedule</span>
+<span>Auto-deleted after 2 hours</span>
+</div>
+<span class="text-outline-variant hidden sm:inline">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">verified</span>
+<span>100% GDPR &amp; ISO compliant</span>
+</div>
+</div>
+</div>
+<!-- Active Live Batch Demo Ribbon (Simulated In-Progress File) -->
+<div class="mt-space-lg max-w-4xl mx-auto bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]">description</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg font-semibold text-on-surface truncate">Q3_Financial_Audit_Report.pdf</span>
+<span class="px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-surface-container text-on-surface-variant">3.8 MB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Target: Microsoft Word (.docx) • High Fidelity OCR enabled</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container animate-spin">sync</span>
+            Processing (78%)
+          </span>
+<button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container-high text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 78%"></div>
+</div>
+</div>
+</section>
+<!-- Popular Tools Grid Section -->
+<section class="w-full bg-surface-container-low/60 py-space-xl">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm pb-space-lg">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Instant Utilities</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">Popular Document Tools</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Direct browser transformations powered by our multi-threaded WASM and cloud conversion engines.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-space-md">
+<!-- 1. JPG to PDF -->
+<a class="group bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between" href="#">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">image</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">JPG to PDF</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Convert single or bulk JPG images into clean, standardized multi-page PDF documents.</p>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary">Image → Doc</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform text-primary">arrow_forward</span>
+</div>
+</a>
+<!-- 2. PDF to JPG -->
+<a class="group bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between" href="#">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">photo_library</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">PDF to JPG</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Render high-resolution raster images from every page of your PDF without loss of quality.</p>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary">300 DPI Rendering</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform text-primary">arrow_forward</span>
+</div>
+</a>
+<!-- 3. PDF to Word -->
+<a class="group bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between" href="#">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">article</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">PDF to Word</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Export formatted DOCX files preserving paragraph spacing, fonts, and inline table grids.</p>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary">Editable DOCX</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform text-primary">arrow_forward</span>
+</div>
+</a>
+<!-- 4. Word to PDF -->
+<a class="group bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between" href="#">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">feed</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Word to PDF</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Generate immutable, print-ready PDFs from DOC and DOCX files with zero font displacement.</p>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary">Office Engine</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform text-primary">arrow_forward</span>
+</div>
+</a>
+<!-- 5. Merge PDF -->
+<a class="group bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between" href="#">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">call_merge</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Merge PDF</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Concatenate unlimited PDF files into one neat package with drag reordering.</p>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary">Visual Reorder</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform text-primary">arrow_forward</span>
+</div>
+</a>
+<!-- 6. Split PDF -->
+<a class="group bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between" href="#">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">call_split</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Split PDF</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Extract specific page sequences or break documents into single individual pages.</p>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary">Page Ranges</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform text-primary">arrow_forward</span>
+</div>
+</a>
+<!-- 7. Compress PDF -->
+<a class="group bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between" href="#">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">compress</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Compress PDF</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Reduce file size up to 85% while keeping vector text sharp and images clear.</p>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary">Smart Bitrate</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform text-primary">arrow_forward</span>
+</div>
+</a>
+<!-- 8. Extract Text (OCR) -->
+<a class="group bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between" href="#">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">document_scanner</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Extract Text (OCR)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Neural text extraction over 100+ languages from flattened and scanned PDFs.</p>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary">AI Recognition</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform text-primary">arrow_forward</span>
+</div>
+</a>
+<!-- 9. Image to Text -->
+<a class="group bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between" href="#">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">translate</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Image to Text</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Grab editable typography directly from phone photos, receipts, and screenshots.</p>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary">TXT / JSON / RTF</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform text-primary">arrow_forward</span>
+</div>
+</a>
+<!-- 10. PNG to PDF -->
+<a class="group bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between" href="#">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">hide_image</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">PNG to PDF</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Convert transparent PNGs or UI mockups cleanly into vector-friendly PDF slides.</p>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary">Alpha Channel Support</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform text-primary">arrow_forward</span>
+</div>
+</a>
+<!-- 11. Rotate PDF -->
+<a class="group bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between" href="#">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">rotate_right</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Rotate PDF</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Fix orientation issues permanently by rotating 90, 180, or 270 degrees clockwise.</p>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary">Selective Orientation</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform text-primary">arrow_forward</span>
+</div>
+</a>
+<!-- 12. Organize PDF -->
+<a class="group bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between" href="#">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">dashboard_customize</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">Organize PDF</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Delete blank pages, rearrange layout sequences, and duplicate key sheet inserts.</p>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary">Full Canvas Grid</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform text-primary">arrow_forward</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+<div class="text-center max-w-2xl mx-auto space-y-space-xs mb-space-xl">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Workflow Simplicity</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Effortless In 3 Fast Steps</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        No account creation required for standard conversions. High throughput execution right inside your browser session.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg relative">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<span class="text-[72px] font-extrabold text-surface-container-highest/60 absolute -right-2 -bottom-4 select-none leading-none">01</span>
+<div>
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary flex items-center justify-center mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[24px]">upload_file</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-semibold">1. Upload your file</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Drag files directly from your workspace, import from Google Drive, or paste document links. Files stay isolated in memory.
+          </p>
+</div>
+<div class="mt-space-lg pt-space-md border-t-0 bg-surface-container-low/60 -mx-space-lg -mb-space-lg px-space-lg py-space-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">lock_reset</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Client-side pre-sanitized</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<span class="text-[72px] font-extrabold text-surface-container-highest/60 absolute -right-2 -bottom-4 select-none leading-none">02</span>
+<div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary flex items-center justify-center mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[24px]">tune</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-semibold">2. Choose settings</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Select compression presets, target extensions, visual rotations, or enable optical OCR extraction with custom language models.
+          </p>
+</div>
+<div class="mt-space-lg pt-space-md border-t-0 bg-surface-container-low/60 -mx-space-lg -mb-space-lg px-space-lg py-space-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">speed</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sub-second execution preview</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<span class="text-[72px] font-extrabold text-surface-container-highest/60 absolute -right-2 -bottom-4 select-none leading-none">03</span>
+<div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-container text-on-tertiary flex items-center justify-center mb-space-md shadow-sm">
+<span class="material-symbols-outlined text-[24px]">download</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 font-semibold">3. Download your result</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Fetch processed files individually or grouped into a unified ZIP file. Records automatically wipe after 2 hours.
+          </p>
+</div>
+<div class="mt-space-lg pt-space-md border-t-0 bg-surface-container-low/60 -mx-space-lg -mb-space-lg px-space-lg py-space-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">auto_delete</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ephemeral storage lifecycle</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Complete Categorized Directory with Sticky Filters -->
+<section class="w-full bg-surface-container-low/40 py-space-xl">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-lg">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Catalog Matrix</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">All Document Tools</h2>
+</div>
+<!-- Live Search Box -->
+<div class="relative w-full md:w-80">
+<input class="w-full h-11 pl-10 pr-4 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant font-body-md text-body-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container" id="tool-search" placeholder="Search tools (e.g., compress, protect, excel)..." type="text"/>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant absolute left-3 top-3">search</span>
+</div>
+</div>
+<!-- Sticky Category Filter Ribbon -->
+<div class="sticky top-16 z-30 bg-surface/90 backdrop-blur-md py-space-sm -mx-gutter px-gutter mb-space-md overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-2 min-w-max" id="category-pills">
+<button class="cat-pill px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md transition-all shadow-sm" data-cat="all">All (28)</button>
+<button class="cat-pill px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all shadow-sm" data-cat="convert-to">Convert to PDF</button>
+<button class="cat-pill px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all shadow-sm" data-cat="convert-from">Convert from PDF</button>
+<button class="cat-pill px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all shadow-sm" data-cat="compress">Compress PDF</button>
+<button class="cat-pill px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all shadow-sm" data-cat="edit">Edit PDF</button>
+<button class="cat-pill px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all shadow-sm" data-cat="organize">Organize PDF</button>
+<button class="cat-pill px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all shadow-sm" data-cat="ocr">OCR &amp; Extract</button>
+<button class="cat-pill px-4 py-2 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all shadow-sm" data-cat="security">PDF Security</button>
+</div>
+</div>
+<!-- Tools Directory Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md" id="tools-container">
+<!-- Category: Convert to PDF -->
+<div class="tool-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="convert-to" data-keywords="jpg jpeg image to pdf">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded text-[11px] font-semibold uppercase tracking-wider bg-surface-container-high text-primary">Convert to PDF</span>
+<span class="material-symbols-outlined text-primary text-[20px]">add_photo_alternate</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">JPG / PNG to PDF</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Combine several raster pictures into a clean multi-page document with margin control.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-primary font-label-sm text-label-sm font-semibold">
+<span>Use tool</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<div class="tool-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="convert-to" data-keywords="word doc docx office to pdf">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded text-[11px] font-semibold uppercase tracking-wider bg-surface-container-high text-primary">Convert to PDF</span>
+<span class="material-symbols-outlined text-primary text-[20px]">description</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Word to PDF</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Export DOCX documents to standard PDF/A archiving standards with exact styling.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-primary font-label-sm text-label-sm font-semibold">
+<span>Use tool</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<div class="tool-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="convert-to" data-keywords="excel xls xlsx spreadsheet to pdf">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded text-[11px] font-semibold uppercase tracking-wider bg-surface-container-high text-primary">Convert to PDF</span>
+<span class="material-symbols-outlined text-primary text-[20px]">table_chart</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Excel to PDF</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Fit columns to printable width and format multi-sheet financial sheets effortlessly.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-primary font-label-sm text-label-sm font-semibold">
+<span>Use tool</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Category: Convert from PDF -->
+<div class="tool-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="convert-from" data-keywords="pdf to word docx editable text">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded text-[11px] font-semibold uppercase tracking-wider bg-surface-container-highest text-secondary-container">Convert from PDF</span>
+<span class="material-symbols-outlined text-secondary-container text-[20px]">edit_document</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">PDF to Word (DOCX)</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Retain typography, header hierarchies, and flowing paragraphs in native Word files.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-primary font-label-sm text-label-sm font-semibold">
+<span>Use tool</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<div class="tool-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="convert-from" data-keywords="pdf to excel spreadsheet data tables xlsx">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded text-[11px] font-semibold uppercase tracking-wider bg-surface-container-highest text-secondary-container">Convert from PDF</span>
+<span class="material-symbols-outlined text-secondary-container text-[20px]">query_stats</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">PDF to Excel (XLSX)</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Intelligently extract tabular lines and raw numbers directly into calculation rows.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-primary font-label-sm text-label-sm font-semibold">
+<span>Use tool</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<div class="tool-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="convert-from" data-keywords="pdf to jpg png high quality image">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded text-[11px] font-semibold uppercase tracking-wider bg-surface-container-highest text-secondary-container">Convert from PDF</span>
+<span class="material-symbols-outlined text-secondary-container text-[20px]">photo_camera</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">PDF to JPG / PNG</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Export pages or isolated embedded photos in studio crisp resolutions.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-primary font-label-sm text-label-sm font-semibold">
+<span>Use tool</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Category: Compress PDF -->
+<div class="tool-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="compress" data-keywords="compress pdf shrink size reduce mb kb email">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded text-[11px] font-semibold uppercase tracking-wider bg-surface-container text-tertiary-container">Compress PDF</span>
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">unfold_less</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Extreme Compression</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Shrink heavy attachments under strict 10MB/25MB email client quotas.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-primary font-label-sm text-label-sm font-semibold">
+<span>Use tool</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<div class="tool-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="compress" data-keywords="lossless compress preserve dpi vector graphics">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded text-[11px] font-semibold uppercase tracking-wider bg-surface-container text-tertiary-container">Compress PDF</span>
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">high_quality</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Lossless Vector Optimizer</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Strip duplicate metadata tags and unused embedded font subsets safely.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-primary font-label-sm text-label-sm font-semibold">
+<span>Use tool</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Category: Edit PDF -->
+<div class="tool-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="edit" data-keywords="edit pdf annotate draw highlight watermark stamp signature">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded text-[11px] font-semibold uppercase tracking-wider bg-surface-container-high text-primary">Edit PDF</span>
+<span class="material-symbols-outlined text-primary text-[20px]">draw</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Annotate &amp; Sign PDF</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Draw digital signatures, insert text callouts, or redact confidential records.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-primary font-label-sm text-label-sm font-semibold">
+<span>Use tool</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<div class="tool-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="edit" data-keywords="add watermark logo page numbers headers footer">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded text-[11px] font-semibold uppercase tracking-wider bg-surface-container-high text-primary">Edit PDF</span>
+<span class="material-symbols-outlined text-primary text-[20px]">branding_watermark</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Watermark &amp; Page Numbers</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Apply company watermarks or sequence numbering with custom opacity controls.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-primary font-label-sm text-label-sm font-semibold">
+<span>Use tool</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Category: Organize PDF -->
+<div class="tool-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="organize" data-keywords="merge split combine order arrange pages">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded text-[11px] font-semibold uppercase tracking-wider bg-surface-container text-on-surface-variant">Organize PDF</span>
+<span class="material-symbols-outlined text-on-surface text-[20px]">layers</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Merge &amp; Rearrange</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Reorder page flow with interactive drag cards before final compilation.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-primary font-label-sm text-label-sm font-semibold">
+<span>Use tool</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Category: OCR & Extract -->
+<div class="tool-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="ocr" data-keywords="ocr extract text recognition scanned document search">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded text-[11px] font-semibold uppercase tracking-wider bg-primary-fixed text-primary">OCR &amp; Extract</span>
+<span class="material-symbols-outlined text-primary text-[20px]">saved_search</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Searchable PDF Generator</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Bake invisible, searchable unicode text layers directly over scanned paper PDFs.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-primary font-label-sm text-label-sm font-semibold">
+<span>Use tool</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Category: PDF Security -->
+<div class="tool-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="security" data-keywords="protect lock encrypt password security">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded text-[11px] font-semibold uppercase tracking-wider bg-error-container text-on-error-container">PDF Security</span>
+<span class="material-symbols-outlined text-error text-[20px]">password</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Protect with Password</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Guard sensitive files with military-grade 256-bit AES cryptographic encryption.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-primary font-label-sm text-label-sm font-semibold">
+<span>Use tool</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<div class="tool-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="security" data-keywords="unlock remove password decrypt security">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-2.5 py-0.5 rounded text-[11px] font-semibold uppercase tracking-wider bg-error-container text-on-error-container">PDF Security</span>
+<span class="material-symbols-outlined text-error text-[20px]">lock_open</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Unlock PDF</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Permanently strip printing restrictions and passwords from documents you own.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-primary font-label-sm text-label-sm font-semibold">
+<span>Use tool</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Client-side Interactive Filtering Script -->
+<script>
+    (function() {
+      const searchInput = document.getElementById('tool-search');
+      const pills = document.querySelectorAll('.cat-pill');
+      const cards = document.querySelectorAll('.tool-card');
+
+      let currentCategory = 'all';
+      let currentQuery = '';
+
+      function filterTools() {
+        cards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          const cardKeywords = (card.getAttribute('data-keywords') || '') + ' ' + card.innerText.toLowerCase();
+          
+          const matchesCategory = (currentCategory === 'all' || cardCat === currentCategory);
+          const matchesQuery = !currentQuery || cardKeywords.includes(currentQuery.toLowerCase());
+
+          if (matchesCategory && matchesQuery) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      }
+
+      if (pills) {
+        pills.forEach(pill => {
+          pill.addEventListener('click', () => {
+            pills.forEach(p => {
+              p.classList.remove('bg-primary', 'text-on-primary');
+              p.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+            });
+            pill.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+            pill.classList.add('bg-primary', 'text-on-primary');
+
+            currentCategory = pill.getAttribute('data-cat');
+            filterTools();
+          });
+        });
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentQuery = e.target.value.trim();
+          filterTools();
+        });
+      }
+
+      // Dropzone Drag-and-Drop Visual States
+      const dropzone = document.getElementById('dropzone');
+      if (dropzone) {
+        ['dragenter', 'dragover'].forEach(eventName => {
+          dropzone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            dropzone.classList.add('bg-surface-container-high');
+          }, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+          dropzone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            dropzone.classList.remove('bg-surface-container-high');
+          }, false);
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] mt-space-xl"><div class="max-w-7xl mx-auto px-gutter pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg pb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="ConvertFlow Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VgFwDUTGfbaKgwq1EoA5p5kE59Tmxmih0pIfLFAgkRAVgYk_tpb2ooPKCkkpFeKUE70u5rJe-DuMxR8YtWf4ws86qBOniGeFBSAA85Nggf--afEL-hQB38Rz2ld2g2Re5PzHWkIouL_1GMWO3EyNfVIkEKg5gagI1WY1piWQEEF8BE6qUEXJPkxSiZdr6RlRH9FYIC6CXTfm4Iz3fraKLnJgCVZwlIaqXDVLIbTV2b8drDGVSnceZS_Tc"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold">ConvertFlow</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">High-performance PDF and image conversion infrastructure built for secure, precision document transformation and micro-tactile workflows.</p><div class="inline-flex items-center gap-space-sm px-3.5 py-2 rounded-lg bg-surface-container-low text-on-surface w-fit"><span class="material-symbols-outlined text-tertiary-container text-[18px]">lock</span><span class="font-label-sm text-label-sm text-on-surface-variant">256-bit SSL encrypted &amp; auto-deleted after 2 hours</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg text-on-surface font-semibold">Conversion Tools</span><nav class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="convert-pdf" href="#">Convert PDF</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="convert-to-pdf" href="#">Convert to PDF</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="compress-pdf" href="#">Compress PDF</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="ocr-and-extract-text" href="#">OCR &amp; Extract Text</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="edit-pdf" href="#">Edit PDF</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg text-on-surface font-semibold">Supported Formats</span><nav class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="supported-formats" href="#">PDF to Word (DOCX)</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="supported-formats" href="#">PDF to Excel (XLSX)</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="supported-formats" href="#">Image to PDF (JPG, PNG)</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="supported-formats" href="#">PDF to High-Res PNG</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="supported-formats" href="#">Full Format Matrix</a></nav></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg text-on-surface font-semibold">Company &amp; Legal</span><nav class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#">About</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#">Contact</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="#">FAQ</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms</a></nav></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm bg-surface-container-low/50 px-space-md py-space-sm rounded-lg"><span class="font-body-sm text-body-sm text-on-surface-variant">© 2025 ConvertFlow Inc. All rights reserved. Zero-logging document pipeline.</span><div class="flex items-center gap-space-md"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">ISO 27001 • SOC 2 Type II Compliant</span></div></div></div></footer></body></html>
